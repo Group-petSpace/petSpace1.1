@@ -1,2 +1,1 @@
-# petSpace1.1
-restarting project from the boiler plate code
+Restarting the petSpace project using the boiler plate code
