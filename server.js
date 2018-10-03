@@ -1,30 +1,28 @@
 require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
 
 // Additional requirements and vaiable setup for passport *Allen
-var routes = require("./routes");
-var shelterOwner = require("./routes/shelterOwner");
-var borrower = require("./routes/borrower");
-var db = require("./models");
-var http = require("http");
-var passport = require("passport");
-var passportConfig = require('./config/passport');
+var flash = require("connect-flash");
+var session = require("express-session");
+var cookieParser = require("cookie-pareser");
+var setupPassport = require("./config/passport.js")
 
 var app = express();
 var PORT = process.env.PORT || 3000;
+
+// Requiring our models for syncing
+var db = require("./models");
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use(bodyParser.text());
 
-// Additional Middleware necessary for passport *Allen
-app.use(express.cookieParser())
-app.use(express({ secret: "ChageMePW1234"}))
-app.use(passport.initialize())
-app.use(passport.session())
+// Additional express middleware for passport *Allen
+app.use(cookieParser());
+app.use(session({secret:"", resave: false, saveUninitialized: false}));
 
 // Handlebars
 app.engine(
@@ -45,11 +43,6 @@ var syncOptions = { force: false };
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
-}
-
-// Additional If test relatied to passport *Allen
-if ("development" === app.get("env")) {
-  app.use(express.errorHandler())
 }
 
 // Starting the server, syncing our models ------------------------------------/
