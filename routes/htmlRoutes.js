@@ -3,11 +3,12 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Pet.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        pets: dbExamples
-      });
+    // db.Pet.findAll({}).then(function(dbExamples) {
+    //   res.render("home", {
+    //     msg: "Welcome!",
+    //     pets: dbExamples
+    //   });
+      res.render("home", {
     });
   });
 
@@ -18,6 +19,11 @@ module.exports = function(app) {
         pet: dbPet
       });
     });
+  });
+
+
+  app.get("/signup", function(req, res) {
+    res.render("signup");
   });
 
   // Render 404 page for any unmatched routes
