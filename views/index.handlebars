@@ -1,35 +1,85 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit Pet</button>
-          <button id="submitUser" class="btn btn-primary float-right">Submit User</button>
-          <button id="submitTransaction" class="btn btn-primary float-right">Submit Transaction</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each pets}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="pet/{{this.id}}">{{this.name}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+<header class="v-header container">
+        <div class="fullscreen-video-wrap">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video src="/public/assets/video/sadkitty.mp4" width="100%" height="100%" type="video/mp4"
+                            playsinline autoplay muted loop></video>
+                    </div>
+                    <div class="carousel-item">
+                        <video src="/public/assets/video/dog.mp4" width="100%" height="100%" type="video/mp4"
+                            playsinline autoplay muted loop></video>
+                    </div>
+                    <div class="carousel-item">
+                        <video src="/public/assets/video/prettykitty.mp4" width="100%" height="100%" type="video/mp4"
+                            playsinline autoplay muted loop></video>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
 
+        <div class="header-overlay"></div>
+        <div class="header-content text-md-center">
+            <i class="fas fa-paw"></i>
+            <h1>Pet Space</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus
+                numquam
+                amet impedit explicabo? Debitis quasi ullam aperiam!</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <a href="#0" class="btn10">
+                            <span>sign up</span>
+                         <div class="transition"></div>
+                       </a>
+                    </div>
+                    <div class="col-sm">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section-a">
+        <div class="container">
+            <h2>Section A</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et
+                maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod
+                quae
+                accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione
+                reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+        </div>
+    </section>
+
+    <section class="section section-b">
+        <div class="container">
+            <h2>Section B</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et
+                maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod
+                quae
+                accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione
+                reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+        </div>
+    </section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script type="text/javascript" src="../public/js/index.js"></script>
