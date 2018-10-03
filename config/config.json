@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "password1",
     "database": "petspacedb",
     "host": "localhost",
     "dialect": "mysql"
