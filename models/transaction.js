@@ -13,13 +13,14 @@ module.exports = function(sequelize, DataTypes) {
         droppedOff: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
-        },
+        }
+        //,
         // the time when a borrower placed a reservation for a pet
-        reservationTime: DataTypes.DATE,
+        //reservationTime: DataTypes.DATE,
         // the time when a borrower picks up a pet, i.e. from a shelter, for a trial
-        startTime: DataTypes.DATE,
+        //startTime: DataTypes.DATE,
         // the time when a borrower returned a pet from a trial or rental
-        endTime: DataTypes.DATE
+        //endTime: DataTypes.DATE
     });
     return Transaction;
   };
