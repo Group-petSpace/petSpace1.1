@@ -25,8 +25,7 @@ module.exports = function(app) {
         breed: 'Tortoiseshell',
         gender: 'Female',
         temperament: 7,
-        available: false,
-        photoURL: "https://placekitten.com/300/300"
+        available: false
 
         }).then(function(dbPet) {
         res.json(dbPet);
@@ -54,6 +53,22 @@ module.exports = function(app) {
         res.json(dbPet);
     });
   });
+
+  // PUT route for updating pets. We can get the updated data from req.body
+  app.put("/api/pets", function(req, res) {
+    // Update takes in an object describing the properties we want to update, and
+    // we use where to describe which objects we want to update
+    db.Pet.update({
+      pickedUp: true
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbTransaction) {
+      res.json(dbTransaction);
+    });
+  });
+
 
   // Delete an example by id
   // app.delete("/api/examples/:id", function(req, res) {
