@@ -11,7 +11,7 @@ module.exports = function(app) {
 
   passport.use(new LocalStrategy(
     function(username, password, done) {
-      db.Admin.findOne({
+      db.User.findOne({
         where: {
           'username': username
         }
