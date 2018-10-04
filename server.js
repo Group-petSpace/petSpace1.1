@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 // Additional requirements and vaiable setup for passport *Allen
 var flash = require("connect-flash");
 var session = require("express-session");
-var cookieParser = require("cookie-pareser");
+var cookieParser = require("cookie-parser");
 var setupPassport = require("./config/passport.js")
 
 var app = express();
@@ -21,16 +21,12 @@ app.use(express.static("public"));
 app.use(bodyParser.text());
 
 // Additional express middleware for passport *Allen
-app.use(cookieParser());
-app.use(session({secret:"", resave: false, saveUninitialized: false}));
+// app.use(cookieParser());
+// app.use(session({secret:"", resave: false, saveUninitialized: false}));
 
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // Routes
