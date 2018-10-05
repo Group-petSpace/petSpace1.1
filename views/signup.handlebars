@@ -1,47 +1,56 @@
 <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <form id="signupForm">
-                    Email:<br>
-                    <input type="text" name="email" value="">
+    <div class="row">
+        <div class="col-sm">
+            <form id="signupForm">
+                Email:<br>
+                <input type="text" name="email" value="">
+                <br>
+                Password:<br>
+                <input type="text" name="password" value="">
+                <br><br>
+                
+                <div id="radio-form" class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="borrower"
+                        checked>
+                   <label class="form-check-label" for="exampleRadios1">
+                        BORROWER
+                    </label>
                     <br>
-                    Password:<br>
-                    <input type="text" name="password" value="">
-                    <br><br>
-                    <ul>
-                        <li>
-                            <input type="radio" name="category" value="borrower" checked> Borrower
-                        </li>
-                        <li>
-                            <input type="radio" name="category" value="shelter"> Shelter<br>
-                        </li>
-                        <li>
-                            <input type="radio" name="category" value="owner"> Owner<br><br>
-                        </li>
-                    </ul>
-                    Name:<br>
-                    <input type="text" name="name" value="">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="shelter">
+                    <label class="form-check-label" for="exampleRadios2">
+                        SHELTER
+                    </label>
                     <br>
-                    Street Address:<br>
-                    <input type="text" name="street-address" value="">
-                    <br>
-                    City:<br>
-                    <input type="text" name="city" value="">
-                    <br>
-                    State:<br>
-                    <input type="text" name="state" value="">
-                    <br>
-                    ZIP:<br>
-                    <input type="text" name="zip" value="">
-                    <br>
-                    Phone Number:<br>
-                    <input type="text" name="phone" value="">
-                    <br><br>
-                </form>
-            </div>
+                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="owner">
+                    <label class="form-check-label" for="exampleRadios3">
+                        OWNER
+                    </label>
+                </div>
+                
+                <br><br>
+                Name:<br>
+                <input type="text" name="name" value="">
+                <br>
+                Street Address:<br>
+                <input type="text" name="street-address" value="">
+                <br>
+                City:<br>
+                <input type="text" name="city" value="">
+                <br>
+                State:<br>
+                <input type="text" name="state" value="">
+                <br>
+                ZIP:<br>
+                <input type="text" name="zip" value="">
+                <br>
+                Phone Number:<br>
+                <input type="text" name="phone" value="">
+                <br><br>
+            </form>
         </div>
-        <a href="/provider">
-          <button id="submit-info">Submit</button>
-        </a>
-        
     </div>
+    <a href="/provider">
+        <button id="submit-info">Submit</button>
+    </a>
+
+</div>
