@@ -19,17 +19,29 @@ module.exports = function(app) {
     });
   });
   app.get("/signup", function(req, res) {
-    console.log("hello from signup");
-    res.render("signup");
+    console.log("signup.handlebars loaded correctly");
+    res.render("signup", {layout: "secondary.handlebars"});
   });
   app.get("/provider", function(req, res){
-    console.log("provider");
+    console.log("provider.handlebars loaded correctly");
     res.render("provider");
-  })
+  });
   app.get("/borrower", function(req, res){
-    console.log("borrower");
+    console.log("borrower.handlebars loaded correctly");
     res.render("borrower");
-  })
+  });
+  app.get("/home", function(req, res){
+    console.log("home.handlebars loaded correctly");
+    res.render("home");
+  });
+  app.get("/petSignup", function(req, res){
+    console.log("petSignup.handlebars loaded correctly");
+    res.render("petSignup");
+  });
+  app.get("/results", function(req, res){
+    console.log("results.handlebars loaded correctly");
+    res.render("results");
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
