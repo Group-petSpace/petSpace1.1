@@ -1,0 +1,21 @@
+<h1>Pulled from HotdogApp Activity</h1>
+
+<h2>Avaliable Pets</h2>
+
+<ul>
+  {{#each pet}}
+    {{#unless vegan}}
+      {{> pets/pets-block vegan=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Unavailable Pets</h2>
+
+<ul>
+  {{#each hotdogs}}
+    {{#if vegan}}
+      {{> pets/pets-block vegan=false}}
+    {{/if}}
+  {{/each}}
+</ul>
