@@ -5,7 +5,6 @@ module.exports = function(sequelize, DataTypes) {
         category: DataTypes.STRING,
         breed: DataTypes.STRING,
         gender: DataTypes.STRING,
-        age: DataTypes.INTEGER,
         // temperament is an integer between 1 and 10, representing how laid-back or high-strung an animal is
         // (temperament of 1 refers to a pet who wants to sleep all day long; temperament of 10 refers to a pet 
         // who wants to play all day long)

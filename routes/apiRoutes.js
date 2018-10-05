@@ -49,7 +49,6 @@ module.exports = function(app) {
         category: req.body.category,
         breed: req.body.breed,
         gender: req.body.gender,
-        age: req.body.age,
         temperament: req.body.temperament,
         photoURL: req.body.photoURL,
         provider_id: req.params.id
