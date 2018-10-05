@@ -1,35 +1,131 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit Pet</button>
-          <button id="submitUser" class="btn btn-primary float-right">Submit User</button>
-          <button id="submitTransaction" class="btn btn-primary float-right">Submit Transaction</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each pets}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="pet/{{this.id}}">{{this.name}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+<header class="v-header container">
+    <div class="fullscreen-video-wrap">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video src="/assets/video/sadkitty.mp4" width="100%" height="100%" type="video/mp4"
+                        playsinline autoplay muted loop></video>
+                </div>
+                <div class="carousel-item">
+                    <video src="/assets/video/dog.mp4" width="100%" height="100%" type="video/mp4"
+                        playsinline autoplay muted loop></video>
+                </div>
+                <div class="carousel-item">
+                    <video src="/assets/video/prettykitty.mp4" width="100%" height="100%" type="video/mp4"
+                        playsinline autoplay muted loop></video>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+    <div class="header-overlay"></div>
+    <div class="header-content text-md-center">
+        <img src="/assets/image/paw.png" alt="logo" style="width:100px;height:100px;">
+        <h1>Pet Space</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus
+            numquam
+            amet impedit explicabo? Debitis quasi ullam aperiam!</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="#0" class="btn10">
+                        <span>sign up</span>
+                        <div class="transition"></div>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <section class="section section-a">
+        <div class="container">
+            <h2>Section A</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et
+                maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod
+                quae
+                accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione
+                reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+        </div>
+    </section>
+
+    <section class="section section-b">
+        <div class="container">
+            <h2>Section B</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et
+                maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod
+                quae
+                accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione
+                reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+        </div>
+    </section>
+
+
+ <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="clearfix">
+                    <div class="c100 p70 big">
+                        <span>70%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <p>Of the 3 million cats and dogs euthanized in shelters each year, approximately 80% are healthy and
+                    treatable and could have been adopted into new homes.</p>
+            </div>
+            <div class="col-sm">
+                <div class="clearfix">
+                    <div class="c100 p80 big">
+                        <span>80%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <p>Percentage of cats euthanized in shelters.</p>
+            </div>
+            <div class="col-sm">
+                <div class="clearfix">
+                    <div class="c100 p77 big">
+                        <span>77%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <p>Percentage of pets living in underserved communities who have never seen a veterinarian.</p>
+            </div>
+        </div>
+    </div>
+    <p>Source: www.humanesociety.org</p>
+    <section class="section section-b">
+        <div class="container">
+            <h3>How to Help</h3>
+            <p>Pet Space connects people with various opportunities to help the animals of our community in need. You
+                can donate to shelters, volunteer at adoption events and shelters, foster a pet,
+                or adopt.</p>
+        </div>
+    </section>
+    <section class="section section-a">
+        <div class="container">
+            <h2>Get Involved</h2>

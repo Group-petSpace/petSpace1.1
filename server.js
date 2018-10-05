@@ -18,7 +18,7 @@ var db = require("./models");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
-app.use(bodyParser.text());
+app.use(express.static("files"));
 
 // Additional express middleware for passport *Allen
 // app.use(cookieParser());
