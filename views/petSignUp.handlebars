@@ -1,0 +1,97 @@
+<form>
+    <div class="h1">New Pet Signup</div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="petNameInput">Name</label>
+            <input type="petName" class="form-control" id="petNameInput" placeholder="i.e. Fido">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="petBreedInput">Breed</label>
+            <input type="petBreed" class="form-control" id="petBreedInput" placeholder="i.e. Grey Hound or Maine Coon">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3">Category</div>
+        <div class="col-md-3">Gender</div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="radio-inline" id="radioCat">
+                    <input type="radio" name="categoryRadio" checked>Cat
+                </label>
+                <label class="radio-inline" id="radioDog">
+                    <input type="radio" name="categoryRadio">Dog
+                </label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="radio-inline" id="radioMale">
+                    <input type="radio" name="genderRadio" checked>Male
+                </label>
+                <label class="radio-inline" id="radioFemale">
+                    <input type="radio" name="genderRadio">Female
+                </label>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <label for="petURLInput">Pet Picture URL</label>
+            <input type="petURL" class="form-control" id="petURLInput" placeholder="https://bit.ly/2RqCrjL">
+
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">Brief Discussion</label>
+            <input type="text" class="form-control" id="inputDescription">
+        </div>
+        <div class="form-group col-md-1">
+            <label for="inputTemperment">Temperament</label>
+            <select id="inputTemperament" class="form-control">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+        </div>
+        {{!-- Age is only here because it's included pet.js, feel free to remove at discretion *Allen --}}
+        <div class="form-group col-md-1">
+            <label for="inputTemperment">Age</label>
+            <select id="inputTemperament" class="form-control">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+        </div>
+        {{!-- Good oppurtunity to add listed handlebar --}}
+        <div class="form-group col-md-4">
+            <label for="inputUserID">User ID</label>
+            <input type="text" class="form-control" id="inputUserID">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Available to Share Their Love?
+            </label>
+        </div>
+    </div>
+    <a href="/results">
+        <button type="submit" href="/results" class="btn btn-primary">Sign in</button>
+    </a>
+</form>

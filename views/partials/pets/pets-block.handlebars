@@ -1,0 +1,9 @@
+<li>
+	{{name}}
+	{{category}}
+    {{breed}}
+    <button class="change-available" data-id="{{id}}" data-newavailable="{{available}}">
+		{{#if available}}Borrow!{{else}}UN-Borrow!{{/if}}
+	</button>
+    <button class="petPet" data-id="{{this.id}}">Pet the Pets!</button>
+</li>
